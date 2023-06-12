@@ -1,7 +1,18 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import HeaderItem from "./HeaderItem";
+import { GiHamburgerMenu } from "react-icons/gi";
+
+const MENI_ITEMS = [
+  { name: "Projects", link: "/projects" },
+  { name: "Tech Stack", link: "/tech-stack" },
+  { name: "Latest CV", link: "/cv" },
+];
 
 export default function Header() {
+  const [mobileDisplay, setMobileDisplay] = useState(true);
+
   return (
     <div className="bg-blue-600 p-3">
       {/* menu wrapper*/}
@@ -12,10 +23,30 @@ export default function Header() {
         </div>
 
         {/* right side menu */}
-        <div className="flex items-center">
-          <HeaderItem>Projects</HeaderItem>
-          <HeaderItem>Tech Stack</HeaderItem>
-          <HeaderItem>Latest CV</HeaderItem>
+        {/* mobile hidden  */}
+        <div className="hidden md:flex items-center">
+          {MENI_ITEMS.map((item, index) => (
+            <HeaderItem key={index} link={item.link}>
+              {item.name}
+            </HeaderItem>
+          ))}
+        </div>
+
+        {/* right side menu */}
+        {/* mobile dispaly  */}
+        <div className="md:hidden flex items-center">
+          <GiHamburgerMenu size={25} onClick={() => setMobileDisplay(!mobileDisplay)}/>
+          {mobileDisplay && (
+            <div className="absolute top-[70px] left-0 right-0">
+              <div className="w-full">
+                {MENI_ITEMS.map((item, index) => (
+                  <HeaderItem className="bg-blue-400 text-lg ml-0 p-3" key={index} link={item.link}>
+                    {item.name}
+                  </HeaderItem>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

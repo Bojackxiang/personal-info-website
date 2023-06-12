@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <div className='bg-neutral-400 h-full flex-col items-center'>
-      
+    <div className='bg-neutral-100 rounded-lg h-full overflow-hidden overflow-y-auto mr-1'>
+      <Header />
     </div>
   )
 }

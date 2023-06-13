@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import HeaderItem from "./HeaderItem";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Link from "next/link";
 
 const MENI_ITEMS = [
   { name: "Projects", link: "/projects" },
@@ -45,16 +46,18 @@ export default function Header() {
       <div className="flex justify-between h-fit p-2">
         {/* left side menu */}
         <div className="flex items-center">
-          <HeaderItem className="text-2xl mr-2">Alex</HeaderItem>
+          <Link href="/">
+            <HeaderItem className="text-2xl mr-2">Alex</HeaderItem>
+          </Link>
         </div>
 
         {/* right side menu */}
         {/* mobile hidden  */}
         <div className="hidden md:flex items-center">
           {MENI_ITEMS.map((item, index) => (
-            <HeaderItem key={index} link={item.link}>
-              {item.name}
-            </HeaderItem>
+            <Link href={item.link} key={`${index}-desktop-item`}>
+              <HeaderItem link={item.link}>{item.name}</HeaderItem>
+            </Link>
           ))}
         </div>
 
@@ -69,13 +72,14 @@ export default function Header() {
             >
               <div className="w-full">
                 {MENI_ITEMS.map((item, index) => (
-                  <HeaderItem
-                    className="bg-blue-400 text-lg ml-0 p-3"
-                    key={index}
-                    link={item.link}
-                  >
-                    {item.name}
-                  </HeaderItem>
+                  <Link href={item.link} key={`${index}-mobile-item`}>
+                    <HeaderItem
+                      className="bg-blue-400 text-lg ml-0 p-3"
+                      link={item.link}
+                    >
+                      {item.name}
+                    </HeaderItem>
+                  </Link>
                 ))}
               </div>
             </div>

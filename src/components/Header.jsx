@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import HeaderItem from "./HeaderItem";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -11,7 +11,33 @@ const MENI_ITEMS = [
 ];
 
 export default function Header() {
-  const [mobileDisplay, setMobileDisplay] = useState(true);
+  const [mobileDisplay, setMobileDisplay] = useState(false);
+  const dropdownRef = useRef(null);
+  const menuButtonRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target)
+      ) {
+        setMobileDisplay(false);
+      }
+    }
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
+  function handleMenuButtonClick(event) {
+    event.stopPropagation(); // Stop the event from propagating to the outside click event listener
+    setMobileDisplay(!mobileDisplay);
+  }
 
   return (
     <div className="bg-blue-600 p-3">
@@ -34,13 +60,20 @@ export default function Header() {
 
         {/* right side menu */}
         {/* mobile dispaly  */}
-        <div className="md:hidden flex items-center">
-          <GiHamburgerMenu size={25} onClick={() => setMobileDisplay(!mobileDisplay)}/>
+        <div className="md:hidden flex items-center" ref={menuButtonRef}>
+          <GiHamburgerMenu size={25} onClick={handleMenuButtonClick} />
           {mobileDisplay && (
-            <div className="absolute top-[70px] left-0 right-0">
+            <div
+              className="absolute top-[70px] left-0 right-0"
+              ref={dropdownRef}
+            >
               <div className="w-full">
                 {MENI_ITEMS.map((item, index) => (
-                  <HeaderItem className="bg-blue-400 text-lg ml-0 p-3" key={index} link={item.link}>
+                  <HeaderItem
+                    className="bg-blue-400 text-lg ml-0 p-3"
+                    key={index}
+                    link={item.link}
+                  >
                     {item.name}
                   </HeaderItem>
                 ))}

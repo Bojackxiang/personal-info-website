@@ -64,7 +64,7 @@ export default function Header() {
         {/* right side menu */}
         {/* mobile dispaly  */}
         <div className="md:hidden flex items-center" ref={menuButtonRef}>
-          <GiHamburgerMenu size={25} onClick={handleMenuButtonClick} />
+          <GiHamburgerMenu size={25} onClick={handleMenuButtonClick} color="white" />
           {mobileDisplay && (
             <div
               className="absolute top-[70px] left-0 right-0"

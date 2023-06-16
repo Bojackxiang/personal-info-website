@@ -35,9 +35,13 @@ export default function Header() {
     };
   }, []);
 
-  function handleMenuButtonClick(event) {
-    event.stopPropagation(); // Stop the event from propagating to the outside click event listener
+  function handleMenuButtonClick() {
     setMobileDisplay(!mobileDisplay);
+  }
+
+  function handleMenuItemClick() {
+    console.log('triggered .....')
+    setMobileDisplay(false);
   }
 
   return (
@@ -56,7 +60,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center">
           {MENI_ITEMS.map((item, index) => (
             <Link href={item.link} key={`${index}-desktop-item`}>
-              <HeaderItem link={item.link}>{item.name}</HeaderItem>
+              <HeaderItem link={item.link}  onClick={handleMenuItemClick}>{item.name}</HeaderItem>
             </Link>
           ))}
         </div>
@@ -64,7 +68,7 @@ export default function Header() {
         {/* right side menu */}
         {/* mobile dispaly  */}
         <div className="md:hidden flex items-center" ref={menuButtonRef}>
-          <GiHamburgerMenu size={25} onClick={handleMenuButtonClick} color="white" />
+          <GiHamburgerMenu size={25} color="white" onClick={handleMenuButtonClick}/>
           {mobileDisplay && (
             <div
               className="absolute top-[70px] left-0 right-0"
@@ -76,6 +80,7 @@ export default function Header() {
                     <HeaderItem
                       className="bg-blue-400 text-lg ml-0 p-3"
                       link={item.link}
+                      onClick={handleMenuButtonClick}
                     >
                       {item.name}
                     </HeaderItem>

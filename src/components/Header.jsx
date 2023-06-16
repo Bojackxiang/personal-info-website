@@ -53,7 +53,7 @@ export default function Header() {
 
         {/* right side menu */}
         {/* mobile hidden  */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden lg:flex items-center">
           {MENI_ITEMS.map((item, index) => (
             <Link href={item.link} key={`${index}-desktop-item`}>
               <HeaderItem link={item.link}>{item.name}</HeaderItem>
@@ -63,7 +63,7 @@ export default function Header() {
 
         {/* right side menu */}
         {/* mobile dispaly  */}
-        <div className="md:hidden flex items-center" ref={menuButtonRef}>
+        <div className="lg:hidden flex items-center" ref={menuButtonRef}>
           <GiHamburgerMenu size={25} onClick={handleMenuButtonClick} />
           {mobileDisplay && (
             <div

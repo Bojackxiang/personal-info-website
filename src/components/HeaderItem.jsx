@@ -7,7 +7,7 @@ const HeaderItem = ({
   children
 }) => {
   return (
-    <div className={twMerge("ml-3 text-base", className)}>
+    <div className={twMerge("ml-3 text-base text-white", className)}>
       {children}
     </div>
   )

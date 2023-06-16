@@ -53,7 +53,7 @@ export default function Header() {
 
         {/* right side menu */}
         {/* mobile hidden  */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden lg:flex items-center">
           {MENI_ITEMS.map((item, index) => (
             <Link href={item.link} key={`${index}-desktop-item`}>
               <HeaderItem link={item.link}>{item.name}</HeaderItem>

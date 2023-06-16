@@ -1,10 +1,9 @@
-import Header from "@/components/Header";
+import Education from "../components/Education";
 
 export default function Home() {
   return (
-    <div className="bg-neutral-100 h-full ">
-      <Header />
-      <div className="bg-green-300 h-5"></div>
+    <div className="w-full lg:w-4/5 bg-white sm:w-full m-auto">
+      <Education/>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Row from "./Row";
+import Row from "../common/Row";
 import EducationImage from "./EducationImage";
 import EducationText from "./EducationText";
 

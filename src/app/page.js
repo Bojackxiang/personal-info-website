@@ -1,4 +1,4 @@
-import FadeIn from "@/animation/AnimationFadeIn";
+
 import Education from "../components/Education";
 
 export default function Home() {

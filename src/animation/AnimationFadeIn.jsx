@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import { Transition } from "@headlessui/react";
+import React, { useEffect, useRef } from "react";
 import styles from "./transition.module.css";
 
 export default function AnimationFadeIn({ children }) {

@@ -7,7 +7,7 @@ function EducationImage({
 }) {
   return (
     <div className='flex lg:flex-1 lg:justify-center justify-center my-auto'>
-      <Image className="rounded-full lg:rounded-lg " src={image} width={100} height={100} alt="education-image"/>
+      <Image className="rounded-lg " src={image} width={100} height={100} alt="education-image"/>
     </div>
   )
 }

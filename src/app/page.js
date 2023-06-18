@@ -1,6 +1,8 @@
 import Info from "@/components/info/Info";
 import Education from "../components/education/Education";
 import AutoTyper from "@/plugins/AutoTyper";
+import Divider from "@/components/common/Divider";
+
 
 const nodeJs = ["NodeJs", 1000];
 const reactJs = ["ReactJs", 1000];
@@ -37,6 +39,7 @@ export default function Home() {
     <div className="w-full lg:w-4/5 bg-white sm:w-full m-auto">
       <AutoTyper words={WORDS} fontSize={fontSize} display={display} />
       <Info />
+      <Divider>Education</Divider>
       <Education />
     </div>
   );

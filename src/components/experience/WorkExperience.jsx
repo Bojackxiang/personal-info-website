@@ -5,7 +5,7 @@ import Row from "../common/Row";
 
 const WorkExperience = () => {
   return (
-    <Row className="w-3/4 m-auto">
+    <Row className="w-3/4 m-auto flex-col-reverse lg:flex-row ">
         <ExperienceText
           title="UNSW"
           position="Front end Developer"

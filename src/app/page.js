@@ -2,6 +2,7 @@ import Info from "@/components/info/Info";
 import Education from "../components/education/Education";
 import AutoTyper from "@/plugins/AutoTyper";
 import Divider from "@/components/common/Divider";
+import WorkExperience from "@/components/experience/WorkExperience";
 
 
 const nodeJs = ["NodeJs", 1000];
@@ -41,6 +42,8 @@ export default function Home() {
       <Info />
       <Divider>Education</Divider>
       <Education />
+      <Divider>Experience</Divider>
+      <WorkExperience/>
     </div>
   );
 }

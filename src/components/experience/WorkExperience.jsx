@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import ExperienceText from "./ExperienceText";
 import ExperienceImage from "./ExperienceImage";

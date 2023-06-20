@@ -19,7 +19,7 @@ const Education = () => {
         />
       </Row>
       <Row className={"justify-center"}>
-        <EducationImage image={"/images/unsw.png"} />
+        <EducationImage image={"/images/unsw-1.png"} />
         <EducationText
           schoolName={"Univeristy of New South Wales"}
           degreeTitle={"Master of Information Technology"}

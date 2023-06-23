@@ -45,7 +45,7 @@ export default function Header() {
   }
 
   return (
-    <div className="bg-blue-600 p-3">
+    <div className="bg-blue-600 p-3 relative">
       {/* menu wrapper*/}
       <div className="flex justify-between h-fit p-2">
         {/* left side menu */}

@@ -1,15 +1,17 @@
-import React from 'react'
-import Row from '../common/Row'
-import InfoImage from './InfoImage'
-import InfoTxt from './InfoTxt'
+import React from "react";
+import Row from "../common/Row";
+import InfoImage from "./InfoImage";
+import InfoTxt from "./InfoTxt";
 
 const Info = () => {
   return (
-    <Row className="w-3/4 m-auto">
-      <InfoImage/>
-      <InfoTxt/>
-    </Row>
-  )
-}
+    <div className="w-full h-screen m-auto bg-gradient-to-r from-sky-500 to-indigo-500">
+      <Row className="w-8/12 lg:w-3/4 m-auto h-full">
+        <InfoImage />
+        <InfoTxt />
+      </Row>
+    </div>
+  );
+};
 
-export default Info
+export default Info;

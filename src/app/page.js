@@ -1,8 +1,11 @@
+'use client';
+
 import Info from "@/components/info/Info";
 import Education from "../components/education/Education";
 import AutoTyper from "@/plugins/AutoTyper";
 import Divider from "@/components/common/Divider";
 import WorkExperience from "@/components/experience/WorkExperience";
+import AosFadeUp from "@/lib/aos-fade-up";
 
 
 const nodeJs = ["NodeJs", 1000];
@@ -42,8 +45,10 @@ export default function Home() {
       <Info />
       <Divider>Education</Divider>
       <Education />
-      <Divider>Experience</Divider>
-      <WorkExperience/>
+      <AosFadeUp>
+        <Divider>Experience</Divider>
+        <WorkExperience />
+      </AosFadeUp>
     </div>
   );
 }

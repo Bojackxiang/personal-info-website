@@ -1,11 +1,12 @@
 'use client';
 
-import React from "react";
+import React, { useEffect } from "react";
 import ExperienceText from "./ExperienceText";
 import ExperienceImage from "./ExperienceImage";
 import Row from "../common/Row";
 
 const WorkExperience = () => {
+
   return (
     <>
       {/* unse */}
@@ -20,7 +21,7 @@ const WorkExperience = () => {
             "Mongoose",
           ]}
         />
-        <ExperienceImage src={"/images/unsw.png"}/>
+        <ExperienceImage src={"/images/unsw.png"} />
       </Row>
 
       {/* NSW transport */}

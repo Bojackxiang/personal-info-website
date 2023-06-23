@@ -30,12 +30,12 @@ const display = "inline-block";
 
 const InfoTxt = () => {
   return (
-    <div className="flex-1 flex justify-center items-center">
+    <div className="flex-1 flex flex-col justify-center items-center">
       <div>
-        <h1 className={twMerge(lexend.className, "text-3xl sm:text-7xl text-bold text-gray-800")}>
+        <h1 className={twMerge(lexend.className, "text-3xl sm:text-8xl text-bold text-gray-800")}>
           {selfIntro.title}
         </h1>
-        <h2>
+        <h2 className="mt-2">
           <span className="text-2xl inline-block mr-2 text-gray-800">I am</span>
           <AutoTyper
             words={WORDS}

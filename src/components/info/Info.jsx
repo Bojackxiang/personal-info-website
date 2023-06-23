@@ -5,7 +5,7 @@ import InfoTxt from "./InfoTxt";
 
 const Info = () => {
   return (
-    <div className="w-full min-h-screen lg:h-screen m-auto bg-gradient-to-r from-sky-500 to-indigo-500">
+    <div className="w-full h-screen m-auto bg-gradient-to-r from-sky-500 to-indigo-500 overflow-hidden">
       <Row className="w-8/12 lg:w-3/4 m-auto h-full">
         <InfoImage />
         <InfoTxt />

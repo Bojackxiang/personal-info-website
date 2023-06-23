@@ -11,8 +11,6 @@ const InfoImage = () => {
           width={200}
           height={200}
           src={"/images/avatar.jpg"}
-          placeholder="blur"
-          blurDataURL={`data:image/svg+xml;`}
         />
       </div>
       <div className="mt-8 lg:mt-4">

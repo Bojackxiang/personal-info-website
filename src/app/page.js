@@ -10,7 +10,7 @@ import AosFadeUp from "@/lib/aos-fade-up";
 
 export default function Home() {
   return (
-    <div className="w-full bg-white m-auto"></div>
+    <div className="w-full bg-white m-auto">
       <Info />
       <AosFadeUp>
         <Divider>Education</Divider>

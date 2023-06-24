@@ -6,6 +6,8 @@ import Education from "../components/education/Education";
 import Divider from "@/components/common/Divider";
 import WorkExperience from "@/components/experience/WorkExperience";
 import AosFadeUp from "@/lib/aos-fade-up";
+import TechStack from "@/components/tech-stack/TechStack";
+
 
 
 export default function Home() {
@@ -19,6 +21,10 @@ export default function Home() {
       <AosFadeUp>
         <Divider>Experience</Divider>
         <WorkExperience />
+      </AosFadeUp>
+      <AosFadeUp>
+        <Divider>Tech Stack</Divider>
+        <TechStack />
       </AosFadeUp>
     </div>
   );

@@ -18,15 +18,15 @@ export default function Home() {
       </AosFadeUp>
 
       <AosFadeUp>
-        <Divider>Experience</Divider>
-        <WorkExperience />
-      </AosFadeUp>
-
-      <AosFadeUp>
         <Divider>Tech Stack</Divider>
         <TechStack />
       </AosFadeUp>
 
+      <AosFadeUp>
+        <Divider>Experience</Divider>
+        <WorkExperience />
+        <Footer />
+      </AosFadeUp>
     </div>
   );
 }

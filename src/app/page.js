@@ -8,8 +8,6 @@ import AosFadeUp from "@/lib/aos-fade-up";
 import TechStack from "@/components/tech-stack/TechStack";
 import Footer from "@/components/footer/Footer";
 
-
-
 export default function Home() {
   return (
     <div className="w-full bg-white m-auto">
@@ -18,15 +16,17 @@ export default function Home() {
         <Divider>Education</Divider>
         <Education />
       </AosFadeUp>
+
       <AosFadeUp>
         <Divider>Experience</Divider>
         <WorkExperience />
       </AosFadeUp>
+
       <AosFadeUp>
         <Divider>Tech Stack</Divider>
         <TechStack />
       </AosFadeUp>
-      <Footer/>
+
     </div>
   );
 }

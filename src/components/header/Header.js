@@ -42,7 +42,7 @@ const Header = () => {
       <Navbar.Collapse>
         {NAV_ITEMS.map(({ name, href }) => (
           <Navbar.Link
-            className="text-neutral-900 hover:text-neutral-500 duration-100 text-xl border-0"
+            className="text-neutral-900 duration-100 text-xl border-0 md:hover:bg-transparent md:hover:text-white"
             key={`${name}-${href}`}
             href={`${href}`}
           >

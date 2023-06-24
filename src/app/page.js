@@ -2,11 +2,11 @@
 
 import Info from "@/components/info/Info";
 import Education from "../components/education/Education";
-
 import Divider from "@/components/common/Divider";
 import WorkExperience from "@/components/experience/WorkExperience";
 import AosFadeUp from "@/lib/aos-fade-up";
 import TechStack from "@/components/tech-stack/TechStack";
+import Footer from "@/components/footer/Footer";
 
 
 
@@ -26,6 +26,7 @@ export default function Home() {
         <Divider>Tech Stack</Divider>
         <TechStack />
       </AosFadeUp>
+      <Footer/>
     </div>
   );
 }

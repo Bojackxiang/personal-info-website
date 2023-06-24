@@ -1,4 +1,4 @@
-import Header from '@/components/header/Header'
+import Header from '@/components/header/Header-legacy'
 import React from 'react'
 
 const ProjectLayout = ({children}) => {

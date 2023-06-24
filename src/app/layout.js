@@ -19,7 +19,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={twMerge("min-h-full bg-neutral-100", font.className)}>
         {/* <AnimationFadeIn> */}
-        {/* <Header /> */}
+        <div className="fixed left-0 right-0 top-- z-50">
+        <Header />
+        </div>
+        
         {children}
         {/* </AnimationFadeIn> */}
       </body>
